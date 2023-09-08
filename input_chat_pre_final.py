@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 import openai
 import random
-from decouple import config  # Импортируйте функцию config из библиотеки
+from decouple import config  
 
 app = Flask(__name__)
 
