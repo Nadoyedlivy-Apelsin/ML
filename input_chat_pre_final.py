@@ -6,7 +6,7 @@ from decouple import config
 app = Flask(__name__)
 
 # Установите ваш ключ API OpenAI
-openai.api_key = config('OPENAI_API_KEY')  # Используйте config для чтения значения из .env файла
+openai.api_key = config('OPENAI_API_KEY')  
 
 # Функция для выбора случайной аминокислоты из файла
 def get_random_amino():
