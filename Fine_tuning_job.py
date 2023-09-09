@@ -1,13 +1,11 @@
 import openai
-
-with open('api_key_open_ai.txt', 'r') as file:
-    file_contents_1 = file.read()
+import os
 
 with open('file_id.txt', 'r') as file:
     file_id = file.read()
 
-api_key = file_contents_1
-openai.api_key = api_key
+# Установите ваш ключ API OpenAI
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 response = openai.FineTuningJob.create(
     training_file = file_id,
